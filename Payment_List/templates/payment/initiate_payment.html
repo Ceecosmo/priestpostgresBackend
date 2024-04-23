@@ -1,0 +1,182 @@
+{% extends './base.html' %}
+
+
+
+{% load widget_tweaks %}
+
+{% block content %}
+   
+<div class="container mt-2">
+    <h4 style="color:darkorange" class="text-center pt-5"> WELCOME! WE HONOUR YOUR PRESENCE</h4>
+    <h5 style="color:darkorange" class="text-center">PLEASE SUPPORT THE OLD PRIESTS AT PRIESTS' WELFARE HOME AWKA,
+        NIGERIA.</h5>
+
+    <div class="row">
+        <div class="col-md-6">
+
+
+            <div class="container pt-5">
+                <h5 class="mt-2">DIRECTOR OF PRIESTS' WELFARE HOME, AWKA.</h5>
+                <div class="row">
+
+
+
+                    <div class="col-md-7">
+
+                        <img src="https://priestwelfare.netlify.app/assets/images/fada4.jpg" alt="" style="width: 390px; height: 470px"
+                            class='img-fluid rounded' data-aos="fade-up" />
+                    </div>
+                    <div class="col-md-5" data-aos="fade-up">
+
+                        <div class='bg-red text-center'></div>
+                        <div class="pt-3" data-aos="fade-up">
+                            <p>Contact Us when you find it difficult to deposite.
+
+                                <br></br><span class='text-danger1' style="font-Weight: bold;">Reach Us on:
+                                    08066555555, WhatsApp: 09067688888</span>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+        <div class="col-md-6">
+
+            <form action="." method="POST">
+                {% csrf_token %}
+
+
+
+                <div class="container pt-5">
+                     <h5 class="mt-2">ADD YOUR SUPPORT HERE "No amount is small"</h5>
+                    <div class="d-flex mt-3">
+
+
+
+                        <div class="me-2">
+                            <label style="font-size: 20px;" for="">Full Name</label>
+                            <div> {% render_field payment_form.creditors_FullName class="form-control"%} </div>
+                        </div>
+
+
+
+                        <div class="">
+                            <label style="font-size: 20px;" for="">Add Amount</label>
+                            <div> {% render_field payment_form.amount class="form-control" %}</div>
+                        </div>
+
+
+
+                       
+                    </div> 
+
+                    <div class="d-flex">
+                        <div class="mb-3 me-2">
+                            <label style="font-size: 20px;" for="">Emaill Address</label>
+                            <div>{% render_field payment_form.email class="form-control" %}
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3 ">
+                            <label style="font-size: 20px;" for="">Phone Number</label>
+                            <div> {% render_field payment_form.phone_number class="form-control" %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label style="font-size: 20px;" for="">Leave Us a short Message(Optional)</label>
+                        <div> {% render_field payment_form.message class="form-control" %}
+                        </div>
+                    </div>
+                   
+
+                    <!-- <div class="mt-2">
+                        <label style="font-size: 20px;" for="">Leave Us a short Message(Optional)</label>
+                        <div id="" style="width: 350px;" cols="30" rows="4" placeholder="(Optional)"> 
+                            {% render_field payment_form.message class="form-control" %}</div>
+
+                    </div>  -->
+
+
+
+                    <input class="btn btn-danger " type="submit" value="Proceed to Payment &#8594;">
+
+                    <br></br> <br></br><br></br>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+        
+
+        <div class="text-center">
+
+            <a href="http://localhost:5173/" class="btn btn-danger"><i class="fa fa-arrow-left ms-3 me-3"></i>Back to Home</a>
+        </div>
+
+    </div>
+   
+
+<br></br>
+<div class="container">
+    <div class="text-center">
+        <img src="/images/credit.jpg"
+        style="width: 200px; border-radius: 5px; height: 40px;" alt="">
+
+    </div>
+
+</div>
+<br></br>
+
+    <style>
+        .btn-danger {
+            background-color: darkorange !important;
+
+        }
+
+        .btn-danger:hover {
+            color: blue !important;
+        }
+    </style>
+
+
+
+</div>
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

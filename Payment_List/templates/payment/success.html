@@ -1,0 +1,39 @@
+{% extends './base.html' %}
+
+{% block content %}
+
+
+<form action="" method="POST">
+    <div class="container  pt-5">
+        <div class="text-center">
+            <h3 class="display-10 fw-bold 1h-1 mb-3" style="color:#88ff00;"><em>Your Payment was successful..</em></h3>
+            <p class="fs-4 ">Thank you very much for your enouraging supports.
+
+                <hr>
+            <h5>Here is your Payment ID: <h5 style="font-size: 15px;">please copy</h5> <span style="border-radius: 5px; background-color: black; color:#88ff00; font-size: 13px;">{{ payment.ref}}</span></h5>
+                <br><br>
+
+              
+            <a href="{% url 'initiate-payment' %}" class="btn btn-danger">Back to
+                Payment</a>
+
+    
+        </div>
+    </div>
+</form>
+
+     <style>
+        
+        .btn-danger {
+            background-color: darkorange !important;
+
+        }
+
+        .btn-danger:hover {
+            color: blue !important;
+        }
+    </style>
+
+
+
+{% endblock content %}
