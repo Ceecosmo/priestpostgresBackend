@@ -169,4 +169,5 @@ CORS_ORIGIN_WHITELIST = ['https://priestwelfare.netlify.app',
 
 
 PAYSTACK_SECRET_KEY = ""
-PAYSTACK_PUBLIC_KEY = "pk_test_bba321d6d66d9bfb793976c13a98c5cdf416875d"
+# use ethod below when you want to hide any of yuor SECRET KEYS, then you have to configure in your online database
+PAYSTACK_PUBLIC_KEY = os.environ.get("PAYSTACK_PUBLIC_KEY")
