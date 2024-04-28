@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 admin.site.site_header="Welcome to Priests' Welfare Admin Dashboard"
 
 urlpatterns = [
@@ -25,3 +27,5 @@ urlpatterns = [
     path('NoteBook/', include('NoteBook.urls')),
     path('contact/', include('contact.urls')),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
